@@ -4,13 +4,16 @@
   "description": "MaringaM blog in vuepress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vuepress build"
+    "dev": "vuepress dev src",
+    "build": "vuepress build src --dest dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "vuepress": "^1.6.0"
+  },
+  "dependencies": {
+    "vuepress-theme-meteorlxy": "^1.9.0"
   }
 }
