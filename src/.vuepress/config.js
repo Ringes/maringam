@@ -26,7 +26,7 @@ module.exports = {
       nickname: 'Maringa',
 
       // Introduction of yourself (HTML supported)
-      description: 'Dev<br/>Yoga<br/>Trance',
+      description: 'Bootstrapping<br/>Dev<br/>Yoga<br/>Trance',
 
       // Email
       // email: 'me@maringam.com',
