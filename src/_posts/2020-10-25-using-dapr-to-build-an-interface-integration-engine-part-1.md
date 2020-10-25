@@ -1,5 +1,5 @@
 ---
-category: healthcare interface
+category: dev
 tags:
   - Dapr
 date: 2020-10-25
@@ -23,19 +23,19 @@ So all these applications have to share patient data, and most did this via an i
 
 At the time, our product was built in Visual Basic 6 (VB6), and thats what we used to build the engine. We had to support the different protocols and formats for interfaces. It was not exactly straightforward, there's many things that are not easy to do in VB6, like threading (anyone dealt with marshalling?), or windows services, or does it really need all that memory, or can it scale out to this farm, or please please please can it just try run like forever? Running in older tech also made a lot of other MUNDANE things difficult, like test driven development, interfacing with newer applications, monitoring, logging or just being able to build new stuff. Great testament to VB6 though, it still runs and is still supported!
 
-Anyway, that was a long time ago, or so I thought and then along comes [Dapr](https://dapr.io/)...
+Anyway, that was a long time ago, and then I come across [Dapr](https://dapr.io/)...
 
 ### What's Dapr?
 
-I watched a session on MSBUILD introducing something new called [Dapr](https://dapr.io/). What's dapr?...straight from the website, "...An event-driven, portable runtime for building microservices on cloud and edge...". Sounds cool. Then there was a demo, dapr watching for and logging tweets, I dont think it got to [mine](https://twitter.com/MaringaM/status/1262827963755696128), but I thought, ok looks good. It logged everything, and it could monitor stuff, and on reading further it could do more, like encrypt, scale out, was configuration driven and had really MUNDANE stuff. All you had to do was code what you wanted to do with the tweet.
+I watched a session on MSBUILD introducing something new called [Dapr](https://dapr.io/). What's dapr?...straight from the website, "...An event-driven, portable runtime for building microservices on cloud and edge...". Sounds cool. Then there was a demo, dapr watching for and logging tweets using a configuration file, I dont think it got to [mine](https://twitter.com/MaringaM/status/1262827963755696128), but I thought, ok looks good. It logged everything, and it could monitor stuff, and on reading further it could do more, like encrypt, scale out, was configuration driven and had really MUNDANE stuff. All you had to do was code what you wanted to do with the tweet.
 
-Wait, what, just deal with the tweet? Could I use this runtime as the core of an interface engine, where I dont need to worry about logging, monitoring, encrypting, scaling and maybe just process an interface message? If I had to build an interface engine again, would I use Dapr and would it resolve all the previous pain points? There's only one way to find out...
+Wait, what, just deal with the tweet? All I could think was, tweet equals interface message. Could I use this runtime as the core of an interface engine, where I dont need to worry about logging, monitoring, encrypting, scaling and maybe just process an interface message? If I had to build an interface engine again, would I use Dapr and would it resolve all the previous pain points? There's only one way to find out...
 
 ### Let's build an Interface Engine using Dapr!
 
 So let's build an interface engine using Dapr.
 
-I'm not sure how long this is going to take, so I'll put this into a series of blog posts. Considering what an interface does, each post will deal with the following items I have identified so far, and which will probably be expanded as I go along:
+I'm not sure how long this is going to take, definitely more than a single post, so I've identified the following, leading to a series of blog posts. They will probably be expanded as I go along:
 
 - overall architecture, installation
 - interface definition and configuration
@@ -43,4 +43,4 @@ I'm not sure how long this is going to take, so I'll put this into a series of b
 - message processing
 - scaling, logging, encryption
 
-### Next
+If you have dealt with an interface or integration engine and maybe need to figure out if something is possible, please send a message and I'll see if I can include and work it out!
